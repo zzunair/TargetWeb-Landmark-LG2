@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <defs>
+    <linearGradient id="svcbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#152018"/>
+      <stop offset="1" stop-color="#1F3D2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="500" fill="url(#svcbg)"/>
+  <circle cx="350" cy="235" r="150" fill="rgba(255,255,255,.06)"/>
+  <g transform="translate(350,235)">
+    <circle r="92" fill="none" stroke="#3EA65A" stroke-width="14" stroke-dasharray="16 14"/>
+    <g transform="rotate(-40)">
+      <rect x="-18" y="-120" width="36" height="150" rx="14" fill="#F7F5EC"/>
+      <path d="M -40 -150 a 40 40 0 0 1 80 0 l -20 0 a 20 20 0 0 0 -40 0 Z" fill="#F7F5EC"/>
+    </g>
+    <circle cx="70" cy="60" r="34" fill="#E8792D"/>
+    <circle cx="70" cy="60" r="12" fill="#152018"/>
+  </g>
+  <text x="350" y="460" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F7F5EC" text-anchor="middle" opacity="0.85">Service &amp; Repair</text>
+</svg>

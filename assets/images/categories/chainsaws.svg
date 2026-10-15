@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="grad-chainsaws" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F3D2A"/>
+      <stop offset="1" stop-color="#2f5c3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad-chainsaws)"/>
+  <circle cx="200" cy="210" r="118" fill="rgba(255,255,255,.08)"/>
+  <g transform="translate(200,210)">
+    
+    <rect x="-78" y="-8" width="150" height="16" rx="6" fill="#F7F5EC"/>
+    <polygon points="-70,-8 -62,-8 -66,-20" fill="#F7F5EC"/><polygon points="-54,-8 -46,-8 -50,-20" fill="#F7F5EC"/><polygon points="-38,-8 -30,-8 -34,-20" fill="#F7F5EC"/><polygon points="-22,-8 -14,-8 -18,-20" fill="#F7F5EC"/><polygon points="-6,-8 2,-8 -2,-20" fill="#F7F5EC"/><polygon points="10,-8 18,-8 14,-20" fill="#F7F5EC"/><polygon points="26,-8 34,-8 30,-20" fill="#F7F5EC"/><polygon points="42,-8 50,-8 46,-20" fill="#F7F5EC"/><polygon points="58,-8 66,-8 62,-20" fill="#F7F5EC"/>
+    <path d="M 72 0 C 110 -6 118 30 96 46 C 76 60 40 52 30 30 Z" fill="#F7F5EC"/>
+    
+  </g>
+  <text x="200" y="372" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#F7F5EC" text-anchor="middle" opacity="0.85">Chainsaws</text>
+</svg>
