@@ -110,6 +110,14 @@ p{margin:0 0 1em;color:var(--gl-text-light);}
 	.gl-header__nav,.gl-header__actions .gl-phone-pill{display:none;}
 	.gl-mobile-toggle{display:flex;}
 }
+@media (max-width:640px){
+	.gl-header__inner{gap:12px;padding:12px 16px;}
+	.gl-header__actions .gl-btn{display:none;}
+	.gl-header__brand,.gl-header__logo-fallback,.gl-logo-text{min-width:0;}
+	.gl-header__brand{flex:1;}
+	.gl-logo-text strong,.gl-logo-text small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	.gl-mobile-toggle{width:44px;height:44px;}
+}
 
 /* =========================================================
    HERO
@@ -283,6 +291,10 @@ p{margin:0 0 1em;color:var(--gl-text-light);}
 .gl-form-disclaimer{font-size:12px;color:var(--gl-text-light);text-align:center;margin-top:12px;margin-bottom:0;}
 .gl-form-success{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:40px 20px;}
 .gl-form-success .dashicons{font-size:44px;width:44px;height:44px;color:var(--gl-green-bright);}
+.gl-form-error{margin:0 0 16px;padding:12px 14px;border-radius:var(--gl-radius-sm);background:#fff4f0;color:#9a3412;font-size:14px;}
+.gl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.gl-quote-form-wrap #tw-crm-popup[data-tw-crm-inline]{display:block;position:static;padding:0;}
+.gl-quote-form-wrap .tw-crm-form__title,.gl-quote-form-wrap .tw-crm-popup__close{display:none;}
 
 @media (max-width:900px){.gl-quote-grid{grid-template-columns:1fr;}.gl-form-row--split{grid-template-columns:1fr;}}
 

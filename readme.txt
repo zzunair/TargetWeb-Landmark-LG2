@@ -1,4 +1,4 @@
-=== TargetWeb Meadow ===
+=== TargetWeb - Landmark ===
 Author: TargetWeb
 Author URI: https://www.idealcomputersystems.com/targetweb
 Requires at least: 6.0
@@ -26,7 +26,7 @@ or Wix's theme editor. There are no separate "Equipment Categories" or
 2. Go to Appearance > Menus and create a "Primary Menu" (assign it to the
    Primary Menu location). Optionally create Footer Shop / Footer Services /
    Footer Company menus for the footer columns.
-3. Go to Appearance > Customize > ⚙ TargetWeb Meadow Theme Options. This single
+3. Go to Appearance > Customize > ⚙ TargetWeb - Landmark Theme Options. This single
    panel contains every editable piece of the site:
      - Colors — 9 color pickers controlling the entire palette
      - Header, Hero, Trust Bar, Section Titles
@@ -49,11 +49,11 @@ or Wix's theme editor. There are no separate "Equipment Categories" or
    don't have rights to.
 5. (Optional) Set your site logo under Customize > Site Identity, and set
    the small tagline text there too.
-6. If you ever want to start over, go to Appearance > TargetWeb Meadow Setup and
+6. If you ever want to start over, go to Appearance > TargetWeb - Landmark Setup and
    click "Reset Content Blocks" to restore the original demo rows.
 
 == What's included ==
-- Full Customizer panel ("⚙ TargetWeb Meadow Theme Options") covering colors,
+- Full Customizer panel ("⚙ TargetWeb - Landmark Theme Options") covering colors,
   header, hero, trust bar, section titles, financing CTA, service & repair
   band, contact info, showroom, and footer.
 - ↕ Homepage Section Order — reorder or hide any of the 11 homepage
@@ -71,7 +71,7 @@ or Wix's theme editor. There are no separate "Equipment Categories" or
 - On activation, the theme automatically creates: the homepage, 4 pages
   (About Us, Careers, Community, Blog), 3 sample blog posts, and a Primary
   Menu plus 3 footer menus (Shop / Services / Company) — all wired to real
-  URLs. Re-run any of this anytime from Appearance > TargetWeb Meadow Setup.
+  URLs. Re-run any of this anytime from Appearance > TargetWeb - Landmark Setup.
 - A working "Get My Free Quote" form that emails the address set in
   Customize > Contact Info (or falls back to your WP admin email).
 - Fully responsive layout, mobile nav, animated FAQ accordion, and an

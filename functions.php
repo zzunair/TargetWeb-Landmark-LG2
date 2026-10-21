@@ -7,7 +7,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'GREENLINE_VERSION', '1.0.0' );
+define( 'GREENLINE_VERSION', '1.0.3' );
 define( 'GREENLINE_DIR', get_template_directory() );
 define( 'GREENLINE_URI', get_template_directory_uri() );
 
@@ -133,6 +133,8 @@ require GREENLINE_DIR . '/inc/customizer.php';
 require GREENLINE_DIR . '/inc/demo-content.php';
 require GREENLINE_DIR . '/inc/template-tags.php';
 require GREENLINE_DIR . '/inc/form-handler.php';
+require GREENLINE_DIR . '/inc/seo.php';
+require GREENLINE_DIR . '/inc/maintenance.php';
 
 /**
  * Excerpt length for blog

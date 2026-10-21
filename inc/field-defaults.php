@@ -128,6 +128,7 @@ function greenline_text_defaults() {
 		'gl_social_facebook'            => '',
 		'gl_social_instagram'           => '',
 		'gl_social_youtube'             => '',
+		'gl_seo_desc'                   => 'Local outdoor power equipment dealer for sales, service, parts, and financing. Request a quote and a specialist will follow up within one business day.',
 
 		// Image defaults (kept here too so greenline_opt() covers images consistently)
 		'gl_hero_image'  => GREENLINE_URI . '/assets/images/scenes/hero.svg',

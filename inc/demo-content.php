@@ -1,6 +1,6 @@
 <?php
 /**
- * Setup page under Appearance ▸ TargetWeb Meadow Setup.
+ * Setup page under Appearance ▸ TargetWeb - Landmark Setup.
  *
  * Content blocks (categories, services, features, testimonials, FAQs) now
  * ship with real defaults baked into the Customizer settings themselves, so
@@ -30,8 +30,8 @@ function greenline_find_post_by_title( $title, $post_type = 'page' ) {
 
 function greenline_setup_admin_menu() {
 	add_theme_page(
-		__( 'TargetWeb Meadow Setup', 'greenline' ),
-		__( 'TargetWeb Meadow Setup', 'greenline' ),
+		__( 'TargetWeb - Landmark Setup', 'greenline' ),
+		__( 'TargetWeb - Landmark Setup', 'greenline' ),
 		'manage_options',
 		'greenline-setup',
 		'greenline_setup_page'
@@ -62,8 +62,8 @@ function greenline_setup_page() {
 	$front_page_set = 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' );
 	?>
 	<div class="wrap">
-		<h1><?php _e( 'TargetWeb Meadow — Theme Setup', 'greenline' ); ?></h1>
-		<p><?php _e( 'The homepage ships fully populated with demo content — categories, services, why-choose-us tiles, testimonials, and FAQs are all real, editable rows already. Go to Appearance ▸ Customize ▸ "⚙ TargetWeb Meadow Theme Options" to add your own photos and edit any text, or use the tools below.', 'greenline' ); ?></p>
+		<h1><?php _e( 'TargetWeb - Landmark — Theme Setup', 'greenline' ); ?></h1>
+		<p><?php _e( 'The homepage ships fully populated with demo content — categories, services, why-choose-us tiles, testimonials, and FAQs are all real, editable rows already. Go to Appearance ▸ Customize ▸ "⚙ TargetWeb - Landmark Theme Options" to add your own photos and edit any text, or use the tools below.', 'greenline' ); ?></p>
 
 		<?php if ( $front_page_set ) : ?>
 			<div class="notice notice-success inline"><p><?php _e( 'Your homepage is set correctly.', 'greenline' ); ?></p></div>

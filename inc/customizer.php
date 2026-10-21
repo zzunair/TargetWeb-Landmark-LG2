@@ -78,7 +78,7 @@ function greenline_customize_register( $wp_customize ) {
 
 	/* ================= PANEL ================= */
 	$wp_customize->add_panel( 'greenline_panel', array(
-		'title'       => __( '⚙ TargetWeb Meadow Theme Options', 'greenline' ),
+		'title'       => __( '⚙ TargetWeb - Landmark Theme Options', 'greenline' ),
 		'description' => __( 'Every section of the homepage is editable here — no code needed. Repeatable content (categories, services, testimonials, FAQs) lives under their own menu items in the sidebar.', 'greenline' ),
 		'priority'    => 1,
 	) );

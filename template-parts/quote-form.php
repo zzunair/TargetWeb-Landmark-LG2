@@ -1,7 +1,16 @@
 <?php
 /** Free quote section — contact cards + form. @package Greenline */
 $categories = greenline_get_repeater( 'gl_categories_repeater' );
-$sent = isset( $_GET['gl_quote'] ) && 'sent' === $_GET['gl_quote'];
+$quote_state = isset( $_GET['gl_quote'] ) ? sanitize_key( wp_unslash( $_GET['gl_quote'] ) ) : '';
+$sent        = ( 'sent' === $quote_state );
+$quote_error = '';
+if ( 'email' === $quote_state ) {
+	$quote_error = __( 'Please enter a valid email address.', 'greenline' );
+} elseif ( 'error' === $quote_state ) {
+	$quote_error = __( 'Please enter your name and a valid email address.', 'greenline' );
+} elseif ( 'limit' === $quote_state ) {
+	$quote_error = __( 'Please wait a while before sending another request.', 'greenline' );
+}
 ?>
 <section class="gl-section" id="quote">
 	<div class="gl-container gl-quote-grid">
@@ -32,10 +41,16 @@ $sent = isset( $_GET['gl_quote'] ) && 'sent' === $_GET['gl_quote'];
 					<span class="dashicons dashicons-yes-alt"></span>
 					<p><?php _e( "Thanks — we've got your request and will follow up within one business day.", 'greenline' ); ?></p>
 				</div>
+			<?php elseif ( greenline_crm_ready() ) : ?>
+				<?php do_action( 'tw_crm_render_form' ); ?>
 			<?php else : ?>
 			<form class="gl-quote-form" method="post" action="<?php echo esc_url( home_url( '/' ) ); ?>#quote">
 				<?php wp_nonce_field( 'greenline_quote_form', 'greenline_quote_nonce' ); ?>
 				<input type="hidden" name="gl_quote_submit" value="1">
+				<div class="gl-hp" aria-hidden="true"><label><?php esc_html_e( 'Website', 'greenline' ); ?><input type="text" name="gl_website" tabindex="-1" autocomplete="off"></label></div>
+				<?php if ( $quote_error ) : ?>
+					<p class="gl-form-error" role="alert"><?php echo esc_html( $quote_error ); ?></p>
+				<?php endif; ?>
 				<div class="gl-form-row gl-form-row--split">
 					<div class="gl-form-field">
 						<label><?php _e( 'Full Name', 'greenline' ); ?></label>
