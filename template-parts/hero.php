@@ -16,9 +16,6 @@
 				<a class="gl-btn gl-btn--primary gl-btn--lg" href="<?php echo esc_url( greenline_opt( 'gl_hero_btn1_link', '#quote' ) ); ?>">
 					<?php echo esc_html( greenline_opt( 'gl_hero_btn1_text' ) ); ?> <span class="dashicons dashicons-arrow-right-alt"></span>
 				</a>
-				<a class="gl-btn gl-btn--outline gl-btn--lg" href="<?php echo esc_url( greenline_opt( 'gl_hero_btn2_link', '#contact' ) ); ?>">
-					<span class="dashicons dashicons-calendar-alt"></span> <?php echo esc_html( greenline_opt( 'gl_hero_btn2_text' ) ); ?>
-				</a>
 			</div>
 			<div class="gl-hero__stats">
 				<div class="gl-stat"><strong><?php echo esc_html( greenline_opt( 'gl_stat1_number' ) ); ?></strong><span><?php echo esc_html( greenline_opt( 'gl_stat1_label' ) ); ?></span></div>

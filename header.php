@@ -28,7 +28,8 @@
 						<span class="dashicons dashicons-marker"></span>
 					</span>
 					<span class="gl-logo-text">
-						<strong><?php bloginfo( 'name' ); ?></strong>
+						<?php $gl_logo_text = greenline_opt( 'gl_logo_text', 'MowtivatedPwr' ); ?>
+						<strong><?php echo esc_html( $gl_logo_text ? $gl_logo_text : 'MowtivatedPwr' ); ?></strong>
 						<small><?php echo esc_html( greenline_opt( 'gl_site_tagline_small', 'Power Equipment Co.' ) ); ?></small>
 					</span>
 				</a>
@@ -37,12 +38,12 @@
 
 		<nav class="gl-header__nav" aria-label="<?php esc_attr_e( 'Primary Menu', 'greenline' ); ?>">
 			<?php
-			wp_nav_menu( array(
+			wp_nav_menu( tw_main_menu_args( array(
 				'theme_location' => 'primary',
 				'container'      => false,
 				'menu_class'     => 'gl-nav-menu',
-				'fallback_cb'    => 'greenline_default_menu_fallback',
-			) );
+				'fallback_cb'    => false,
+			) ) );
 			?>
 		</nav>
 
@@ -64,12 +65,12 @@
 
 	<div id="gl-mobile-menu" class="gl-mobile-menu">
 		<?php
-		wp_nav_menu( array(
+		wp_nav_menu( tw_main_menu_args( array(
 			'theme_location' => 'primary',
 			'container'      => false,
 			'menu_class'     => 'gl-mobile-menu__list',
-			'fallback_cb'    => 'greenline_default_menu_fallback',
-		) );
+			'fallback_cb'    => false,
+		) ) );
 		?>
 		<a class="gl-btn gl-btn--primary" href="<?php echo esc_url( greenline_opt( 'gl_header_cta_link', '#quote' ) ); ?>">
 			<?php echo esc_html( greenline_opt( 'gl_header_cta_text', 'Request a Quote' ) ); ?>

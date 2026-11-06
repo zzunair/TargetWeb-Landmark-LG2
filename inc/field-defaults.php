@@ -34,6 +34,7 @@ function greenline_text_defaults() {
 		'gl_phone_link'         => '5554129087',
 		'gl_header_cta_text'    => 'Request a Quote',
 		'gl_header_cta_link'    => '#quote',
+		'gl_logo_text'          => 'MowtivatedPwr',
 		'gl_site_tagline_small' => 'Power Equipment Co.',
 
 		// Hero
@@ -44,8 +45,6 @@ function greenline_text_defaults() {
 		'gl_hero_subtext'        => 'From residential lawn care to commercial landscaping equipment, we help you find the right machine — backed by expert service and flexible financing.',
 		'gl_hero_btn1_text'      => 'Request a Free Quote',
 		'gl_hero_btn1_link'      => '#quote',
-		'gl_hero_btn2_text'      => 'Schedule a Visit',
-		'gl_hero_btn2_link'      => '#contact',
 		'gl_hero_rating_value'   => '4.9',
 		'gl_hero_rating_count'   => '1,240 reviews',
 		'gl_hero_guarantee'      => 'Backed by our',

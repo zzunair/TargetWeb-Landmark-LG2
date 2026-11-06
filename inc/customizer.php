@@ -132,6 +132,7 @@ function greenline_customize_register( $wp_customize ) {
 	/* ================= HEADER ================= */
 	$wp_customize->add_section( 'gl_sec_header', array( 'title' => __( 'Header', 'greenline' ), 'panel' => 'greenline_panel', 'priority' => 10 ) );
 	greenline_register_fields( $wp_customize, 'gl_sec_header', array(
+		'gl_logo_text'          => array( 'label' => 'Logo text (used when no logo image)', 'default' => 'MowtivatedPwr' ),
 		'gl_header_since_badge' => array( 'label' => 'Top badge text', 'default' => '✦ Family-Owned Since 1998' ),
 		'gl_phone_display' => array( 'label' => 'Phone number (displayed)', 'default' => '(555) 412-9087' ),
 		'gl_phone_link'    => array( 'label' => 'Phone number (tel: link, digits only)', 'default' => '5554129087' ),
@@ -149,8 +150,6 @@ function greenline_customize_register( $wp_customize ) {
 		'gl_hero_subtext'     => array( 'label' => 'Subheading paragraph', 'type' => 'textarea', 'default' => 'From residential lawn care to commercial landscaping equipment, we help you find the right machine — backed by expert service and flexible financing.' ),
 		'gl_hero_btn1_text'   => array( 'label' => 'Primary button text', 'default' => 'Request a Free Quote' ),
 		'gl_hero_btn1_link'   => array( 'label' => 'Primary button link', 'default' => '#quote', 'type' => 'url' ),
-		'gl_hero_btn2_text'   => array( 'label' => 'Secondary button text', 'default' => 'Schedule a Visit' ),
-		'gl_hero_btn2_link'   => array( 'label' => 'Secondary button link', 'default' => '#contact', 'type' => 'url' ),
 		'gl_hero_rating_value'=> array( 'label' => 'Rating value', 'default' => '4.9' ),
 		'gl_hero_rating_count'=> array( 'label' => 'Review count text', 'default' => '1,240 reviews' ),
 		'gl_hero_guarantee'   => array( 'label' => 'Guarantee badge — small label', 'default' => 'Backed by our' ),
@@ -348,6 +347,22 @@ function greenline_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'gl_site_tagline_small', array( 'default' => 'Power Equipment Co.', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'gl_site_tagline_small', array(
 		'label' => __( 'Small text under logo name (header)', 'greenline' ), 'section' => 'title_tagline', 'type' => 'text', 'priority' => 25,
+	) );
+
+	$wp_customize->add_section( 'gl_sec_targetcrm', array(
+		'title'    => __( 'TargetCRM', 'greenline' ),
+		'panel'    => 'greenline_panel',
+		'priority' => 80,
+	) );
+	$wp_customize->add_setting( 'targetcrm_client_id', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'targetcrm_client_id', array(
+		'label'       => __( 'TargetCRM client ID', 'greenline' ),
+		'description' => __( 'Loads the Constellation dealer widget. Leave empty to keep it off.', 'greenline' ),
+		'section'     => 'gl_sec_targetcrm',
+		'type'        => 'text',
 	) );
 }
 add_action( 'customize_register', 'greenline_customize_register' );

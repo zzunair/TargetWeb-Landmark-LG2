@@ -14,8 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Read + decode a repeater setting. Always returns an array.
  */
 function greenline_get_repeater( $key ) {
-	$raw = get_theme_mod( $key, '' );
-	if ( empty( $raw ) ) return array();
+	$raw = get_theme_mod( $key, null );
+	if ( null === $raw || false === $raw || '' === $raw ) {
+		$map = array(
+			'gl_categories_repeater'   => 'greenline_default_categories',
+			'gl_services_repeater'     => 'greenline_default_services',
+			'gl_features_repeater'     => 'greenline_default_features',
+			'gl_testimonials_repeater' => 'greenline_default_testimonials',
+			'gl_faqs_repeater'         => 'greenline_default_faqs',
+		);
+		return ( isset( $map[ $key ] ) && function_exists( $map[ $key ] ) ) ? call_user_func( $map[ $key ] ) : array();
+	}
 	$data = json_decode( $raw, true );
 	return is_array( $data ) ? $data : array();
 }

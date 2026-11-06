@@ -11,7 +11,8 @@
 			<div class="gl-footer__brand">
 				<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
 					<div class="gl-logo-text gl-logo-text--footer">
-						<strong><?php bloginfo( 'name' ); ?></strong>
+						<?php $gl_logo_text = greenline_opt( 'gl_logo_text', 'MowtivatedPwr' ); ?>
+						<strong><?php echo esc_html( $gl_logo_text ? $gl_logo_text : 'MowtivatedPwr' ); ?></strong>
 						<small><?php echo esc_html( greenline_opt( 'gl_site_tagline_small', 'Power Equipment Co.' ) ); ?></small>
 					</div>
 				<?php endif; ?>

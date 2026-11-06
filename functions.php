@@ -8,6 +8,19 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'GREENLINE_VERSION', '1.0.3' );
+
+if ( ! function_exists( 'tw_main_menu_args' ) ) {
+	function tw_main_menu_args( $args = array() ) {
+		$menu = wp_get_nav_menu_object( 'Main Menu' );
+		if ( ! $menu ) {
+			$menu = wp_get_nav_menu_object( 'main-menu' );
+		}
+		if ( $menu ) {
+			$args['menu'] = (int) $menu->term_id;
+		}
+		return $args;
+	}
+}
 define( 'GREENLINE_DIR', get_template_directory() );
 define( 'GREENLINE_URI', get_template_directory_uri() );
 
@@ -56,6 +69,9 @@ function greenline_scripts() {
 	wp_enqueue_style( 'greenline-google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap', array(), null );
 	wp_enqueue_style( 'greenline-style', GREENLINE_URI . '/style.css', array(), GREENLINE_VERSION );
 	wp_enqueue_style( 'greenline-main', GREENLINE_URI . '/assets/css/main.css', array( 'greenline-style' ), GREENLINE_VERSION );
+	if ( get_stylesheet() !== get_template() ) {
+		wp_enqueue_style( 'greenline-child', get_stylesheet_uri(), array( 'greenline-main' ), wp_get_theme()->get( 'Version' ) );
+	}
 
 	wp_enqueue_script( 'greenline-main', GREENLINE_URI . '/assets/js/main.js', array(), GREENLINE_VERSION, true );
 
@@ -160,3 +176,15 @@ function greenline_editor_color_palette() {
 	);
 }
 add_action( 'after_setup_theme', 'greenline_editor_color_palette' );
+
+/**
+ * TargetCRM widget. Prints only when a client ID is saved.
+ */
+function greenline_targetcrm_widget() {
+	$client_id = sanitize_text_field( (string) get_theme_mod( 'targetcrm_client_id', '' ) );
+	if ( '' === $client_id ) {
+		return;
+	}
+	echo '<script src="https://app.constellationdealer.com/widget.js" id="target-crm-widget" data-client-id="' . esc_attr( $client_id ) . '" defer></script>' . "\n";
+}
+add_action( 'wp_head', 'greenline_targetcrm_widget', 20 );
